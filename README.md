@@ -171,14 +171,17 @@ FX, FP, BCD, egyéb műveletek
 
 **1 bites félösszeadó:**  
 A+B -> S(xor), C(and)
+
 ![](1_bites_felosszeado.png)
 
 **1 bites teljes összeadó:**  
 A+B+Cin -> S,Cout, 2db félösszeadó + xor, S=AXBXC C=ACin+BCin+AB
+
 ![](1_bites_teljes_osszeado.png)
 
 **n-bites soros összeadó:**  
 carry (flip/flop reg), 2 léptető reg, 1bites késleltető
+
 ![](n_bites_soros_osszeado.png)
 
 
