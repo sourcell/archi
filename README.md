@@ -337,7 +337,7 @@ csak egymás után lehet biteket küldeni (kódolás->plusz HW)
 a perifériák mintha a rendszerbuszon lennének, CPU közvetlenül címzi, párhuzamos, megosztott, minden eszköz közös cím/adat/vezérlő vezetékkel, arbitrálás (buszfoglalás), 1db busz
 
 **PCIe**  
-soros, gyors, kevés érintkező, hot-plug, különálló vezetékek, full duplex, többféle sebességű aljzat
+soros, gyors, kevés érintkező, hot-plug, különálló vezetékek, full duplex, többféle szélességű aljzat
 
 **FSB**  
 CPU<->perifériák, 64bit, CPU-n kívüli komm., northbridge (gyors, memóriák, grafikus interfész), southbridge (IO kontroller, lassab perifériák kiszolgálása)
@@ -1182,16 +1182,26 @@ keskeny VLIW (90-es évek, Intel + HP):
 - ~99% cache-hit
 
 **helyettesítési stratégiák:**  
-- felesleges blokkok cseréje
-- FIFO / LIFO / LFU / LRU
-- cache tároló tartalmának cseréjekor a találati arány fenntartása érdekében kell
 - alapból a cache tele van
+- felesleges blokkok cseréje
+- cache tároló tartalmának cseréjekor a találati arány fenntartása érdekében kell
+- FIFO / LIFO / LFU / LRU
 
 **visszakeresés módja:**  
-...
+- a tárolóhelybeli címével együtt tárolódnak adatok
+- CAM - Content Address Memory:
+  - tartalom szerinti asszociatív keresés
+  - a vizsgált adatnak a cache-ben tárolt adattal való egyezőségének vizsgálata kiolvasáskor és kereséskor
+- keresett adat címével vagy annak egy részével (tag) keres
 
 **inclusive- és exclusive cache::**  
-...
+- inclusive:
+  - egy adat több helyen is lehet
+  - hátrány: kevesebb hely L2-ben
+  - előny: L1 szabadon cserélhető, több mag esetén elég L2-ben keresni
+- exclusive:
+  - minden cache egymástól független
+  - nem lehet ugyanaz az adat több tárban
 
 **cache tipusok:**  
 - teljesen asszociatív:
