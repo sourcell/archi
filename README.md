@@ -6,8 +6,12 @@
 számításra vonatkozó alapelvek absztrakciója
 
 **kapcsolatai:**  
-modell (követelmények), programnyelv (specifikáció), architektúra (implementáció)
-fajtái: adat, objektum, predikátum, tudás, hibrid
+modell (követelmények), programnyelv (specifikáció), architektúra (implementáció)  
+
+![](szamitasi_modell.png)
+
+**fajtái:**  
+adat, objektum, predikátum, tudás, hibrid
 
 **jellemzői:**  
 min hajtjuk végre a számítást, hogyan képezzük le a feladatot, mi vezérli a sorrendet
@@ -46,7 +50,9 @@ címzés, címbusz, fizikai, virtuális
 
 **fizikai:**  
 CPU látja, gyors, kicsi
-virtuális: programozó látja, transzparens folyamatok (adatok mozgatása, virt. címek valóssá fordítása)
+
+**virtuális:**  
+programozó látja, transzparens folyamatok (adatok mozgatása, virt. címek valóssá fordítása)
 
 **regisztertér:**  
 nagy teljesítmény, saját címtér
@@ -81,7 +87,7 @@ egyes/kettes komplemens, előjel
 (nem) normalizált, binárisra normalizált (pontossági szintek)
 
 **címzési módok:**  
-címszámítás (abszolút, relatív), cím módosítás (auto inc/dec), deklarált cím interpretálása
+címszámítás (abszolút, relatív egy bázissal), cím módosítás (auto inc/dec), deklarált cím interpretálása
 
 **indexelés:**  
 indexregiszterrel eltolás, több dimenzió
@@ -397,7 +403,7 @@ több IO vezérlő csatlakozik párhuzamosan (lassab perifériák), küldés byt
 ---
 
 **fogalma:**  
-Direct Memory Address  
+Direct Memory Access  
 sok adat esetén, gyors perifériáknál (pl merevlemez), CPU nélküli adatátvitel, szerény komplexitásnövekedés
 
 **megvalósítása:**  
