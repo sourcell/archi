@@ -198,8 +198,15 @@ carry (flip/flop reg), 2 léptető reg, 1bites késleltető
 **n-bites párhuzamos összeadó:**  
 Ripple Carry Adder (több öszeadó egymás mellett)
 
+![](n_bites_parhuzamos_osszeado.png)
+
 **előrejelzett átviteles összeadó:**  
-carryk csak bemenetektől függenek, rekurzív, generate(AB), propogate (A+B), CLA
+carryk csak bemenetektől függenek, rekurzív, generate(AB), propogate (A+B), CLA  
+G = AB  
+P = A+B  
+Cout = AB + Cin(A+B) = G + Cin*P
+
+![](n_bites_atvitel_elorejelzo_osszeado.png)
 
 
 ## 8. Az aritmetikai egységek felépítése III.
@@ -217,6 +224,8 @@ pontos megfeleltetés, nincs kerekítés, 4bit (0-9, érvénytelen tetrádok), z
 
 **BCD összeadó:**  
 összeadás, érvénytelen tetrád detektálás, konverzió
+
+![](bcd_osszeado.png)
 
 
 ## 9. Az aritmetikai egységek felépítése IV.
@@ -302,9 +311,9 @@ rendszersínnel van szinkronizálva (válasz órajelre fel/le), több logikai eg
 **időzítések (5):**  
 
 - tCL (CAS latency, olvasási parancs -> megjelenés)
-- tRCD (RAS to CAS delay, bank megnyitás -> oszlop kiválasztás),
-- tRAS (banksor aktiválás -> lezárás),
-. tRP (row %, banksor lezárás -> új banksor megnyitása),
+- tRCD (RAS to CAS delay, bank megnyitás -> oszlop kiválasztás)
+- tRAS (banksor aktiválás -> lezárás)
+- tRP (row %, banksor lezárás -> új banksor megnyitása)
 - tRC (ciklusidő, bank sorainak olvasásai közti idő) 
 
 **olvasási ciklus:**  
