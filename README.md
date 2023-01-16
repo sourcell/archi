@@ -384,7 +384,7 @@ CPU aktív részvétel (lekérdezéses) / CPU megszakítással, CPU által irán
 CPU 2 címteret lát (IO / optár), közös busz (lehetnek azonos címek -> M/IO, külön IO utasítások), egyszerű, olcsó, CPU igényes
 
 **I/O port:**  
-vezérlő kártyán, rendszerbusz és periféria közti csatl. pont, egyedi azonosító (saját cím), min. 1 adatregiszter, parancsregiszter, adatregiszterek (input/output), állapotregiszter, jelenlét ellenőrző reg, tulajdonságokat tartalmazó reg, 
+vezérlő kártyán, rendszerbusz és periféria közti csatl. pont, egyedi azonosító (saját cím), min. 1 adatregiszter, parancsregiszter, adatregiszterek (input/output), állapotregiszter, jelenlét ellenőrző reg, tulajdonságokat tartalmazó reg
 
 **memóriában leképezett I/O címtér:**  
 nem kell plusz utasítás, IO vezérlő hozzáfér a rendszerbuszhoz, gyorsabb átvitel, pl monitor, közvetlen címzés
@@ -502,7 +502,7 @@ adatpárhuzamos architektúrák:
 - SIMD
 - szisztorikus
 
-funkctionálisan párhuzamos architektúrák
+funkcionálisan párhuzamos architektúrák
 - utasítás szinten (ILP - instruction level parallelism)
   - futószalag (időbeli párhuzamosság)
   - VLIW (térbeli + időbeli)
@@ -591,7 +591,7 @@ fetch fokozat végzi:
 - programkód tulajdonságai alapján ugrik
 
 **dinamikus elágazásbecslés:**  
-...
+történet bitek
 
 **spekulatív elágazáskezelés elve:**  
 feltételes elágazás (dinamikus kezelés végrehajtás során)  
