@@ -990,7 +990,7 @@ fizikai architektúra:
 
 **vektoros multimédia feldolgozás:**  
 - egyenesekkel / görbékkel határolt objektumok geometriai jellemzőkkel leírhatók
-- a képeket sokzögekre bontjuk fel -> könnyen mozgatható, méretezhető
+- a képeket sokszögekre bontjuk fel -> könnyen mozgatható, méretezhető
 - textúrák: geometriai élek elmosása
 
 3D ábrázolás:
@@ -1012,13 +1012,13 @@ működési elv:
 - új utasításformátum -> nem kompatibilis
 - 1 db több utasítást tartalmazó utasításszó
 - minden utasítás független
-- teljesen párhuzamosítótt kódot kap a HW (statikus kezelés)
+- teljesen párhuzamosított kódot kap a HW (statikus kezelés)
 
 előfeltételek:
 - függőségek kezelése
 - utasítások hatékony ütemezése
 - minden utasítás 1-1 VE-t vezérel
-- utasítás hossz függ a VE-k számától (akár 1024 bit)
+- utasításhossz függ a VE-k számától (akár 1024 bit)
 
 előnyök:
 - ugyanolyan fokú párhuzamosság mellett jóval egyszerűbb architektúra (kevesebb tranzisztor)
@@ -1080,7 +1080,7 @@ keskeny VLIW (90-es évek, Intel + HP):
   - órajel felfutó + lefutó élén is végez műveletet
 - Replay System: hosszú futószalagok miatt
   - az ütemező megbecsli az utasítások végrehajtási idejét
-  - a következő utasítás S/O fokozatnál előre betölthető 
+  - a következő utasítás S/O fokozatánál előre betölthető 
   - rossz becslés: Replay Queue
   - csökkenti a hatékonyságot, de elkerülhető a futószalag kiürülése
 - Thermal Monitor: órajel frekvencia csökkentés / leállítás túlhevülés esetén
@@ -1090,6 +1090,8 @@ keskeny VLIW (90-es évek, Intel + HP):
 - CISC, belül RISC mag
 - hosszabb futószalagok (több függőség, magasabb frekvencia)
 - 1.5 - 3.2 GHz
+
+![](netburst.png)
 
 
 ## 30. Gyorsító tárak I.
